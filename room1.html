@@ -1,0 +1,146 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Switch Toggle Button</title>
+  </head>
+  <body>
+    <form action="" method="get" name="form1">
+        <h1>会室の在室確認</h1>
+    齊藤慶吾
+    <label for="switch1" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch1" name="switch1"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+      <br>
+      郷家幸成
+      <label for="switch2" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch2" name=switch2"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+      <br>
+      片桐知優
+      <label for="switch3" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch3" name="switch3"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+      <br>
+      齊藤智也
+      <label for="switch4" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch4" name="switch4"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+      <br>
+      櫻田智也
+      <label for="switch5" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch5" name="switch5"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+      <br>
+      渋谷柾斗
+      <label for="switch6" class="switch_label">
+        <div class="switch">
+          <input type="checkbox" id="switch6" name="switch6"/>
+          <div class="circle"></div>
+          <div class="base"></div>
+        </div>
+        <span class="title">退室</span>
+      </label>
+    <div>
+      <input type="submit" value="送信" id="button1">
+    </div>
+   </form1>
+
+<?php
+if(isset($_SESSION['switch1'])){
+	$switch1=$_SESSION['switch1']
+}
+if(isset($_SESSION['switch2'])){
+	$switch2=$_SESSION['switch2']
+}
+if(isset($_SESSION['switch3'])){
+	$switch3=$_SESSION['switch3']
+}
+if(isset($_SESSION['switch4'])){
+	$switch4=$_SESSION['switch4']
+}
+if(isset($_SESSION['switch5'])){
+	$switch5=$_SESSION['switch5']
+}
+if(isset($_SESSION['switch6'])){
+	$switch6=$_SESSION['switch6']
+}
+        $_SESSION['switch1']= $_GET['switch1'];
+	$_SESSION['switch2']= $_GET['switch2'];
+	$_SESSION['switch3']= $_GET['switch3'];
+	$_SESSION['switch4']= $_GET['switch4'];
+	$_SESSION['switch5']= $_GET['switch5'];
+	$_SESSION['switch6']= $_GET['switch6'];
+?>
+</body>
+<script>
+	switch1.cheked = $switch1;
+	switch2.cheked = $switch2;
+	switch3.cheked = $switch3;
+	switch4.cheked = $switch4;
+	switch5.cheked = $switch5;
+	switch6.cheked = $switch6;
+    const checkbox = document.getElementById('switch1');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+	const checkbox = document.getElementById('switch2');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+const checkbox = document.getElementById('switch3');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+const checkbox = document.getElementById('switch4');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+const checkbox = document.getElementById('switch5');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+const checkbox = document.getElementById('switch6');
+checkbox.addEventListener('click', () => {
+  const title = document.querySelector('.title');
+  title.textContent = checkbox.checked ? '在室' : '退室';
+});
+  </script>
+</html>
